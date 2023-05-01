@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <!-- Logo image view -->
+
+        <ImageView
+            android:id="@+id/logo_image_view"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="151dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="150dp"
+            android:src="@drawable/logo" />
+
+        <!-- "Fresh Out The Box" text view -->
+
+        <TextView
+            android:id="@+id/fresh_out_the_box_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_image_view"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="153dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="143dp"
+            android:layout_centerHorizontal="true"
+            android:text="Fresh Out The Box" />
+
+        <!-- Email edit text -->
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fresh_out_the_box_text_view"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp" />
+
+        <!-- Password edit text -->
+
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_edit_text"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="31dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp" />
+
+        <!-- Login button -->
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password_edit_text"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="32dp"
+            android:layout_centerHorizontal="true"
+            android:text="Log In" />
+
+        <!-- Sign Up link -->
+
+        <TextView
+            android:id="@+id/sign_up_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:text="Don't have an account? Sign Up" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
