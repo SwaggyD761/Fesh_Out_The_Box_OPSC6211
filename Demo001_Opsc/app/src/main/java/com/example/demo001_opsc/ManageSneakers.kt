@@ -9,6 +9,27 @@ class ManageSneakers : AppCompatActivity() {
         setContentView(R.layout.activity_manage_
     }
 
+
+        dropdownMenu.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                when (position) {
+                    0 -> {
+                        // View Sneaks selected
+                        val intent = Intent(this@YourActivity, ManageSneakersActivity::class.java)
+                        startActivity(intent)
+                    }
+                    1 -> {
+                        // View Collections selected
+                        val intent = Intent(this@YourActivity, ManageCollectionsActivity::class.java)
+                        startActivity(intent)
+                    }
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // Do nothing
+            }
+
     // Get the RecyclerView from the layout
     val recyclerView: RecyclerView = findViewById(R.id.sneakers_recycler_view)
 
