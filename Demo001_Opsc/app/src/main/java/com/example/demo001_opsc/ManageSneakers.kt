@@ -8,7 +8,11 @@ class ManageSneakers : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_manage_
     }
+        val recyclerView: RecyclerView = findViewById(R.id.sneakers_recycler_view)
 
+        // Set the layout manager and adapter for the RecyclerView
+        recyclerView.layoutManager = GridLayoutManager(this, 3)
+        recyclerView.adapter = SneakerAdapter(getSneakersFromDatabase())
 
         dropdownMenu.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -29,13 +33,6 @@ class ManageSneakers : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 // Do nothing
             }
-
-    // Get the RecyclerView from the layout
-    val recyclerView: RecyclerView = findViewById(R.id.sneakers_recycler_view)
-
-    // Set the layout manager and adapter for the RecyclerView
-    recyclerView.layoutManager = GridLayoutManager(this, 3)
-    recyclerView.adapter = SneakerAdapter(getSneakersFromDatabase())
 
 
 
