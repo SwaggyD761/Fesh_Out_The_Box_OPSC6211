@@ -27,12 +27,12 @@ class ManageCollections : AppCompatActivity() {
                 when (position) {
                     0 -> {
                         // View Sneaks selected
-                        val intent = Intent(this@YourActivity, ManageSneakersActivity::class.java)
+                        val intent = Intent(this@ManageSneakers, ManageSneakersActivity::class.java)
                         startActivity(intent)
                     }
                     1 -> {
                         // View Collections selected
-                        val intent = Intent(this@YourActivity, ManageCollectionsActivity::class.java)
+                        val intent = Intent(this@ManageCollections, ManageCollectionsActivity::class.java)
                         startActivity(intent)
                     }
                 }
