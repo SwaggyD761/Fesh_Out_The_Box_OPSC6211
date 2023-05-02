@@ -5,5 +5,171 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ManageSneakers">
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Nav bar -->
+    <LinearLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="409dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="#F0F0F0">
+
+        <!-- Back button -->
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Back"/>
+
+        <!-- FOB -->
+        <TextView
+            android:id="@+id/fob"
+            android:layout_width="209dp"
+            android:layout_height="30dp"
+            android:text="FOB"/>
+
+        <!-- Add sneaker button -->
+        <Button
+            android:id="@+id/add_sneaker_button"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Add Sneaker"/>
+
+    </LinearLayout>
+
+    <!-- Quick display -->
+    <LinearLayout
+        android:id="@+id/quick_display"
+        android:layout_width="409dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/nav_bar"
+        android:background="#FFFFFF">
+
+        <!-- First sneaker badge -->
+        <LinearLayout
+            android:id="@+id/sneaker1"
+            android:layout_width="133dp"
+            android:layout_height="130dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/sneaker1_image"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/sneaker1"/>
+
+            <TextView
+                android:id="@+id/sneaker1_name"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="Sneaker 1"/>
+
+            <TextView
+                android:id="@+id/sneaker1_price"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="$100"/>
+
+        </LinearLayout>
+
+        <!-- Second sneaker badge -->
+        <LinearLayout
+            android:id="@+id/sneaker2"
+            android:layout_width="133dp"
+            android:layout_height="130dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/sneaker2_image"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/sneaker2"/>
+
+            <TextView
+                android:id="@+id/sneaker2_name"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="Sneaker 2"/>
+
+            <TextView
+                android:id="@+id/sneaker2_price"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="$200"/>
+
+        </LinearLayout>
+
+        <!-- third sneaker badge -->
+
+        <LinearLayout
+            android:id="@+id/sneaker3"
+            android:layout_width="133dp"
+            android:layout_height="130dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/sneaker3_image"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/sneaker3"/>
+
+            <TextView
+                android:id="@+id/sneaker3_name"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="Sneaker 2"/>
+
+            <TextView
+                android:id="@+id/sneaker3_price"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="$48"/>
+        </LinearLayout>
+    </LinearLayout>
+
+<!-- view sneakers -->
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/sneaker_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sneaker_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sneaker Name"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+        <TextView
+            android:id="@+id/sneaker_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sneaker Price"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
