@@ -137,7 +137,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp">
-    android:id="@+id/"
+    android:id="@+id/sneakers_recycler_view"
 
     <ImageView
         android:id="@+id/sneaker_image"
