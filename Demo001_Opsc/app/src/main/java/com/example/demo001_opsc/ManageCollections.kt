@@ -14,6 +14,34 @@ class ManageCollections : AppCompatActivity() {
         // Set the layout manager and adapter for the RecyclerView
         recyclerView.layoutManager = GridLayoutManager(this, 3)
         recyclerView.adapter = CollectionAdapter(getCollectionsFromDatabase())
+    
+
+        val dropdownMenu = findViewById<Spinner>(R.id.dropdown_menu)
+        val options = arrayOf("View Sneaks", "View Collections")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        dropdownMenu.adapter = adapter
+
+        dropdownMenu.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                when (position) {
+                    0 -> {
+                        // View Sneaks selected
+                        val intent = Intent(this@YourActivity, ManageSneakersActivity::class.java)
+                        startActivity(intent)
+                    }
+                    1 -> {
+                        // View Collections selected
+                        val intent = Intent(this@YourActivity, ManageCollectionsActivity::class.java)
+                        startActivity(intent)
+                    }
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // Do nothing
+            }
+        }
     }
 
     private fun getCollectionsFromDatabase(): List<Collection> {
